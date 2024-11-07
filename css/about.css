@@ -1,0 +1,62 @@
+
+@font-face {
+    font-family: "Determination";
+    src: url("../fonts/DeterminationMonoWebRegular-Z5oq.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    overflow-x: hidden;
+    -webkit-font-smoothing: none;
+    font-smooth: never;
+}
+img {
+    image-rendering: pixelated;
+}
+#bg {
+    image-rendering: pixelated;
+    position: absolute;
+    z-index: -1;
+    top: 300px;
+    transition: 0.05s;
+}
+
+.box {
+    background-color: black;
+    border: 5px solid white;
+    width: 800px;
+    padding: 15px;
+    font-size: 44px;
+    color: white;
+    font-family: "Determination";
+    display: flow-root;
+    margin: 0 auto;
+}
+@media screen and (min-width: 800px) {
+    span {
+        filter: url(#crispify);
+    }
+}
+#container {
+    position: absolute;
+    width: 100%;
+}
+#dimden {
+    float: left;
+    margin-right: 15px;
+}
+.ut {
+    margin-top: 15px;
+    display: block;
+}
+.ut2 {
+    display: block;
+    margin: 0 15px;
+}
+a {
+    color: yellow;
+    text-decoration: none;
+}
