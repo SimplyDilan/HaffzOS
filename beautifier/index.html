@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from dimden.dev/beautifier/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 03:37:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS "beautifier"</title>
+    <meta name="title" content="JS 'beautifier'">
+    <meta name="description" content="Totaly legit">
+    <link rel="stylesheet" href="style.css">
+    <script src="ace.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="ext-language_tools.min.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <div id="desc">
+        <h2>JS "Beautifier"</h2>
+        <span>A totally legit JS beautifier, makes your JS beautiful as fuck</span><br>
+        <span>Just paste or type in your code</span>
+    </div>
+    <br>
+    <div id="code">
+        <div id="editor-body">
+            <div id="editor">Loading...</div>
+        </div>
+    </div>
+    <script>
+        function generateHell(code, dontTrimRow)                                                                             {
+            let lines = code.split("\n").map((l, i) =>                                                                       {
+                if(l.length === 0) return l                                                                                  ;
+                if(i !== dontTrimRow) l = l.trimEnd()                                                                        ;
+                if(['(', '{', '[', ']', '}', ')', ';', ',', ':'].includes(l[l.length-1]))                                    {
+                    return l.slice(0, -1).trimEnd() + l[l.length-1]                                                          ;
+                } else                                                                                                       {
+                    return l                                                                                                 ;
+                                                                                                                             }
+            })                                                                                                               ;
+            let maxLength = lines[lines.reduce((a, b, i) => lines[a].length < b.length ? i : a, 0)].length                   ;
+            for(let i in lines)                                                                                              {
+                let l = lines[i]                                                                                             ;
+                if(l.length > 0 && ['(', '{', '[', ']', '}', ')', ';', ',', ':'].includes(l[l.length-1]))                    {
+                    let last = l[l.length-1]                                                                                 ;
+                    lines[i] = lines[i].slice(0, -1)                                                                         ;
+                    lines[i] += " ".repeat(maxLength-lines[i].length-1) + last                                               ;
+                                                                                                                             }
+                                                                                                                             }
+            return lines.join("\n")                                                                                          ;
+                                                                                                                             }
+
+        ace.config.set('basePath', 'index.html')                                                                           ;
+        let editor = ace.edit("editor")                                                                                      ;
+        editor.setTheme('ace/theme/terminal')                                                                                ;
+        editor.session.setMode("ace/mode/javascript")                                                                        ;
+        editor.getSession().setValue('')                                                                                     ;
+        editor.setOptions(                                                                                                   {
+            enableBasicAutocompletion: true                                                                                  ,
+            enableSnippets: true                                                                                             ,
+            enableLiveAutocompletion: true                                                                                   ,
+            placeholder: "Just paste or type in your code"
+        })                                                                                                                   ;
+        let ignore, changed, lastLength = 0                                                                                  ;
+        let session = editor.getSession()                                                                                    ;
+        let undoManager = session.getUndoManager()                                                                           ;
+
+        let { UndoManager } = require("ace/undomanager")                                                                     ;
+
+        editor.on('input', function()                                                                                        {
+            if (changed)                                                                                                     {
+                let code = editor.getValue()                                                                                 ;
+                let currentPosition = editor.getCursorPosition()                                                             ;
+                let index = editor.session.doc.positionToIndex(currentPosition)                                              ;
+                if(code[index+1] === ' ')                                                                                    {
+                    code = code.slice(0, index) + code.slice(index+2)                                                        ;
+                                                                                                                             }
+                let beautified = generateHell(code, Math.abs(code.length - lastLength) < 2 ? currentPosition.row : undefined);
+                ignore = true                                                                                                ;
+                session.setUndoManager(new UndoManager())                                                                    ;
+                session.setValue(beautified)                                                                                 ;
+                session.setUndoManager(undoManager)                                                                          ;
+                ignore = false                                                                                               ;
+                editor.moveCursorToPosition(currentPosition)                                                                 ;
+                lastLength = beautified.length                                                                               ;
+            }                                                                                                                ;
+            changed = false                                                                                                  ;
+        })                                                                                                                   ;
+        editor.on('change', function()                                                                                       {
+            if (!ignore) changed = true                                                                                      ;
+        });                                                                                                                  ;
+    </script>
+</body>
+
+<!-- Mirrored from dimden.dev/beautifier/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 03:38:00 GMT -->
+</html>
