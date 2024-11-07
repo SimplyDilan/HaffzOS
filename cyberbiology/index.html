@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from dimden.dev/cyberbiology/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 03:37:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cyberbiology</title>
+    <link href="style.css" rel="stylesheet">
+    <meta name="description" content="Virtual world where cells can evolve.">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137155489-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-137155489-1');
+</script>
+</head>
+<body>
+    <span id="logo">Cyberbiology</span>
+    <canvas id="viewport"></canvas>
+    <span id="dna">DNA</span>
+    <span id="flag">F</span>
+    <span id="mem">M</span>
+    <button id="custom">Use custom</button>
+    <button id="random">Use random</button>
+    <button id="default">Use default</button>
+    <table id="dna-table-parent">
+        <tbody id="dna-table"></tbody>
+    </table>
+    <table id="flag-table-parent">
+        <tbody id="flag-table"></tbody>
+    </table>
+    <table id="mem-table-parent">
+        <tbody id="mem-table"></tbody>
+    </table>
+    <div id="info">
+        <span id="energy">Energy: 0</span>
+        <span id="x">X: 0</span>
+        <span id="y">Y: 0</span>
+        <span id="pc">PC: 0</span>
+        <br>
+        <span id="age">Age: 0</span>
+        <span id="minerals">Minerals: 0</span>
+        <br>
+        <span id="r">R0</span>
+        <span id="g">G0</span>
+        <span id="b">B0</span>
+    </div>
+    <hr id="hr">
+    <div id="log"></div>
+    <div id="controls">
+        <button id="pause">Pause</button>
+        <button id="resume">Resume</button>
+        <button id="1x">1x</button>
+        <button id="2x">2x</button>
+        <button id="4x">4x</button>
+        <span id="ticks">0 ticks</span>
+        <span id="cycles">0 Cycles</span>
+        <span id="year">Summer</span>
+        <button class="mode-btn" onclick="world.mode = 'normal'" title="Normal mode">N</button>
+        <button class="mode-btn" onclick="world.mode = 'energy'" title="Energy mode (brighter - more)">E</button>
+        <button class="mode-btn" onclick="world.mode = 'age'" title="Age mode (brighter - older)">A</button>
+        <button class="mode-btn" onclick="world.mode = 'minerals'" title="Mineral mode (grayer - more)">M</button>
+    </div>
+    <script src="app.js"></script>
+    <iframe src="https://dimden.neocities.org/iframe.html" referrerpolicy="no-referrer" style="display:none"></iframe>
+</body>
+
+<!-- Mirrored from dimden.dev/cyberbiology/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 03:37:54 GMT -->
+</html>
