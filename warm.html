@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from dimden.dev/warm.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 03:41:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>warm</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137155489-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-137155489-1');
+    </script>
+    <style>
+        body {
+            background-color: black;
+            overflow: hidden;
+        }
+        #bg {
+            position: absolute;
+            image-rendering: pixelated;
+        }
+    </style>
+</head>
+<body>
+    <img id="bg" src="images/kelvinfull.gif" width="537" height="454">
+    <script>
+        let bg = document.getElementById("bg");
+        function setPos(x, y) {
+            bg.style.left = +x-273 + "px";
+            bg.style.top = +y-159 + "px";
+        }
+        if(localStorage.kelvinX && localStorage.kelvinY) {
+            setPos(localStorage.kelvinX, localStorage.kelvinY);
+        } else {
+            bg.style.left = "50%";
+            bg.style.top = "50%";
+            bg.style.transform = "translate(-50%, -50%)";
+        }
+        let kelvinBus = new BroadcastChannel("kelvin");
+        kelvinBus.onmessage = function(e) {
+            if(e.data.x && e.data.y) {
+                setPos(e.data.x, e.data.y);
+                localStorage.kelvinX = e.data.x;
+                localStorage.kelvinY = e.data.y;
+            }
+        }
+    </script>
+</body>
+
+<!-- Mirrored from dimden.dev/warm.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 03:41:23 GMT -->
+</html>

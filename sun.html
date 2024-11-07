@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from dimden.dev/sun.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 03:37:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE SUN - dimden</title>
+    <meta name="description" content="GOD DAMN THE SUN!!!!">
+    <meta name="keywords" content="dimden, JS, JavaScript, discord, nes, emulators, 90s, pixels, moon, neocities">
+    <meta name="author" content="dimden">
+    <link rel="preload" as="image" href="images/thesun.webp">
+    <link rel="icon" href="favicon.png">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137155489-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-137155489-1');
+    </script>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            overflow-y: hidden;
+            transition: 0.6s;
+            background-size: cover;
+            image-rendering: pixelated;
+        }
+
+        #container {
+            display: grid;
+            place-items: center;
+            height: 600px
+        }
+        #sunsmallcard {
+            image-rendering: pixelated;
+            width: 28px;
+            cursor: pointer;
+            transition-duration: 0.5s;
+        }
+        #sunsmallcard:hover {
+            width: 36px;
+            transition-duration: 0.5s;
+        }
+        #sun-pre {
+            display: none;
+            width: 10%;
+            opacity: 0;
+            transition: width 1.5s cubic-bezier(.2,1.08,.74,.16), opacity 0.2s ease;
+        }
+        #sun-during {
+            transition: width 1.5s cubic-bezier(.2,1.08,.74,.16), opacity 0.5s ease;
+            opacity: 1;
+            width: 50%;
+        }
+        #sun-after {
+            opacity: 0;
+            width: 50%;
+            transition: 0.3s ease;
+        }
+        
+        body:before {
+            content: "";
+            position: fixed;
+            opacity: 0.2;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+            background-image: url(images/overlay.png);
+            background-repeat: all;
+            background-position: 0px 0px;
+            animation-name: Static;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: steps(4);
+            box-shadow: inset 0px 0px 10em rgb(0 0 0 / 40%);
+            z-index: 5;
+        }
+
+        body:after {
+            content: "";
+            position: fixed;
+            left: 0;
+            top: 0;
+            opacity: 0.5;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+            background-image: url(images/overlay2.png);
+            background-repeat: all;
+            background-position: 0px 0px;
+            animation-name: Static;
+            animation-duration: 0.8s;
+            animation-iteration-count: infinite;
+            animation-timing-function: steps(4);
+            z-index: 5;
+        }
+
+        @keyframes Static {
+            0% { background-position: 0px 0px; }
+            100% { background-position: 0px 4px; }
+        }
+        #bg {
+            opacity: 0;
+            transition: opacity 3s ease, filter 960s ease;
+            transition-delay: 0.5s;
+            position: absolute;
+            left: 0;
+            height: 0;
+            width: 100%;
+            height: 100%;
+            background: url(images/desert.png);
+            image-rendering: pixelated;
+            background-size: cover;
+            z-index: -100;
+            filter: opacity(1) sepia(0.3);
+        }
+        #realsun {
+            opacity: 0;
+            transition: 1s ease;
+            transition-delay: 3s;
+            position: absolute;
+            left: 100px;
+            top: 50px;
+            z-index: 100;
+            image-rendering: auto;
+            cursor: not-allowed;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="bg"></div>
+    <img id="realsun" src="images/realsun.webp">
+    <div id="container">
+          <img src="images/thesunsmall.png" id="sunsmallcard">
+    </div>
+    <script>
+        let smallsun = document.getElementById("sunsmallcard");
+        let bringthesun = document.createElement("audio");
+        bringthesun.src = "sounds/BRINGTHESUN.mp3";
+        let sunmp3 = document.createElement("audio");
+        sunmp3.src = "sounds/thesun.mp3";
+        document.getElementById("container").append(bringthesun);
+        document.getElementById("container").append(sunmp3);
+        smallsun.addEventListener("click", function() {
+            smallsun.style.display = "none";
+            let sun = document.createElement("img");
+            sun.id = "sun-pre";
+            sun.src = "images/thesun.webp";
+            document.getElementById("container").append(sun);
+            sunmp3.play();
+            sun.style.display = "block";
+            setTimeout(() => {
+                document.body.style.backgroundColor = "#101010";
+                // document.body.style.backgroundImage = "url(/images/desert.png)";
+                document.getElementById("bg").style.opacity = "1";
+                document.getElementById("realsun").style.opacity = "1";
+                sun.id = "sun-during";
+                setTimeout(() => {
+                    document.body.style.backgroundColor = "black";
+                    sun.id = "sun-after";
+                    document.getElementById("bg").style.filter = "opacity(0.05) sepia(1)";
+                    setTimeout(() => {
+                        bringthesun.play();
+                        sun.style.display = "none";
+                    }, 500);
+                }, 1200);
+            })
+        });
+    </script>
+</body>
+
+<!-- Mirrored from dimden.dev/sun.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 03:37:18 GMT -->
+</html>

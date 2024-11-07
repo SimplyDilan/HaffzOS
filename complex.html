@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from dimden.dev/complex.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 03:47:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137155489-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-137155489-1');
+    </script>
+    <style>
+        body {
+            background-color: black;
+            overflow: hidden;
+        }
+        img {
+            image-rendering: pixelated;
+        }
+        #clickme {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 100;
+            position: fixed;
+            cursor: pointer;
+        }
+    </style>
+    <script async src="../arc.io/widget.min.js#PtWkKp1P"></script>
+</head>
+<body>
+    <div id="clickme">
+        <img src="images/clickanywhere.png" style="width: 256px;position: absolute;transform:translate(-50%, -50%);left: 50%;top: 50%;">
+    </div>
+    <video src="videos/complex_smaller.mp4" id="bg" style="position: absolute;transform:translate(-50%, -50%);left: 50%;top: 50%;height:90%"></video>
+    <script>
+        let bgm = document.getElementById('bg');
+        bgm.currentTime = Math.floor(Math.random()*100);
+        bgm.addEventListener("ended", () => {
+            bgm.remove();
+        })
+        bgm.play().then(() => {
+            document.getElementById("clickme").hidden = true;
+        }).catch(e => {
+            console.error(e);
+            document.onclick = () => {
+                bgm.play();
+                document.getElementById("clickme").hidden = true;
+                document.onclick = null;
+            }
+        })
+    </script>
+</body>
+
+<!-- Mirrored from dimden.dev/complex.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 03:47:12 GMT -->
+</html>

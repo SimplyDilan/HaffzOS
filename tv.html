@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from dimden.dev/tv.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 03:48:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>estaticpanic</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137155489-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-137155489-1');
+    </script>
+    <style>
+        body {
+            background: url(images/static-tv.gif);
+            margin: 0;
+        }
+        #clickme {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 100;
+            position: fixed;
+        }
+        #clickme > span {
+            font-size: 40px;
+            position: fixed;
+            left: 100px;
+            top: 100px;
+            cursor: pointer;
+            color: white;
+        }
+        #text {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="clickme">
+        <span>click me</span>
+    </div>
+    <div id="text">
+        <br><br>
+        <a href="index.html">back</a>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        for some reason the only real people are always unstable<br>
+        gotta enjoy them as much as i can before they leave<br>
+    </div>
+    <audio src="sounds/livinginthelight.mp3" id="bgm" loop></audio>
+    <script>
+        let bgm = document.getElementById('bgm');
+        bgm.play().then(() => {
+            document.getElementById("clickme").hidden = true;
+        }).catch(e => {
+            document.onclick = () => {
+                bgm.play();
+                document.getElementById("clickme").hidden = true;
+                document.onclick = null;
+            }
+        })
+    </script>
+</body>
+
+<!-- Mirrored from dimden.dev/tv.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 03:48:36 GMT -->
+</html>

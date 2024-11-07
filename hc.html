@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<!-- Mirrored from dimden.dev/hc by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 03:48:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hitcounter</title>
+        <style>
+            :root {
+                --font: "MS UI Gothic";
+                --font-size: 15px;
+            }
+            body {
+                background-color: black;
+                color: rgb(0, 255, 55);
+                margin: 0;
+                overflow: hidden;
+            }
+            @font-face {
+                font-family: "Digital";
+                src: url("fonts/Digital-7d41d.ttf?") format("truetype");
+                font-weight: normal;
+                font-style: normal;
+            }
+            .counter {
+                font-family: Digital;
+                float: right;
+                right: 0;
+                position: absolute;
+                font-size: 16px;
+            }
+            .green {
+                z-index: 5;
+            }
+            .gray {
+                z-index: -1;
+                color: #797979;
+                opacity: 0.3;
+            }
+            .text {
+                float: left;
+                font-family: var(--font), monospace;
+                font-size: var(--font-size);
+            }
+        </style>
+    </head>
+    <body>
+        <div style="float: left">
+            <b class="text">Visits:</b><br />
+            <b class="text">Uniq. Visitors:</b><br />
+            <b class="text">On-site:</b>
+        </div>
+        <div style="position: fixed; right: 0">
+            <span class="counter green" id="hits">436961</span><br />
+            <span class="counter green" id="visitors">215868</span><br />
+            <span class="counter green" id="online">9</span><br />
+        </div>
+        <div style="position: fixed; right: 0; z-index: -1">
+            <span class="counter gray">00000000</span><br />
+            <span class="counter gray">00000000</span><br />
+            <span class="counter gray">00000000</span>
+        </div>
+        <script>
+            // fallback font
+            (function (document) {
+                var width;
+                var body = document.body;
+
+                var container = document.createElement("span");
+                container.innerHTML = Array(100).join("wi");
+                container.style.cssText = [
+                    "position:absolute",
+                    "width:auto",
+                    "font-size:128px",
+                    "left:-99999px",
+                ].join(" !important;");
+
+                var getWidth = function (fontFamily) {
+                    container.style.fontFamily = fontFamily;
+
+                    body.appendChild(container);
+                    width = container.clientWidth;
+                    body.removeChild(container);
+
+                    return width;
+                };
+
+                // Pre compute the widths of monospace, serif & sans-serif
+                // to improve performance.
+                var monoWidth = getWidth("monospace");
+                var serifWidth = getWidth("serif");
+                var sansWidth = getWidth("sans-serif");
+
+                window.isFontAvailable = function (font) {
+                    return (
+                        monoWidth !== getWidth(font + ",monospace") ||
+                        sansWidth !== getWidth(font + ",sans-serif") ||
+                        serifWidth !== getWidth(font + ",serif")
+                    );
+                };
+            })(document);
+
+            setTimeout(() => {
+                if (!isFontAvailable("MS UI Gothic")) {
+                    const root = document.querySelector(":root");
+                    root.style.setProperty("--font-size", "12px");
+                }
+            }, 10);
+
+            setInterval(() => {
+                fetch("services/hc/raw.html")
+                    .then((i) => i.text())
+                    .then((i) => {
+                        let [hits, visitors, online] = i.split(",");
+                        document.getElementById("hits").innerText = hits;
+                        document.getElementById("visitors").innerText = visitors;
+                        document.getElementById("online").innerText = online;
+                    });
+            }, 5000);
+        </script>
+    </body>
+
+<!-- Mirrored from dimden.dev/hc by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 03:48:31 GMT -->
+</html>
