@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from dimden.dev/rainsong/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 03:48:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rain Song</title>
+    <style>
+        #page {
+            width: 100%;
+            height: 100%;
+            cursor: url('Rain_Song.png'), auto;	
+        }
+        table {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+        }
+        tr {
+            height: 100%;
+            width: auto;
+        }
+        td {
+            height: 100%;
+            text-align: center;
+            font-size: 48px;
+            color: white;
+            font-family: sans-serif;
+            -webkit-touch-callout: none; /* iOS Safari */
+            -webkit-user-select: none; /* Safari */
+            -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
+        }
+        body {
+            margin: 0;
+        }
+        #Am { background-color: #353745 }
+        #G { background-color: #2CB69D }
+        #E { background-color: #E6DD79 }
+        #D { background-color: #F2C167 }
+        #C { background-color: #CD594E }
+        #F { background-color: #db54ae }
+    </style>
+</head>
+<body>
+    <div id="page">
+        <table>
+            <tbody>
+                <tr>
+                    <td id="Am" onclick="play('Am')">A</td>
+                    <td id="G" onclick="play('G')">G</td>
+                    <td id="E" onclick="play('E')">E</td>
+                    <td id="D" onclick="play('D')">D</td>
+                    <td id="C" onclick="play('C')">C</td>
+                    <td id="F" onclick="play('F')">F</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        let [Am, G, E, D, C, F] = new Array(6).fill(1).map(i => new Audio());
+        Am.src ="_____Am.wav";
+        G.src = "____G.wav";
+        E.src = "___E.wav";
+        D.src = "__D.wav";
+        C.src = "_C.wav";
+        F.src = "F.wav";
+
+        function play(accord) {
+            let a = new Audio();
+            switch(accord) {
+                case "Am":Am.cloneNode(true).play();break;
+                case "G": G.cloneNode(true).play(); break;
+                case "E": E.cloneNode(true).play(); break;
+                case "D": D.cloneNode(true).play(); break;
+                case "C": C.cloneNode(true).play(); break;
+                case "F": F.cloneNode(true).play(); break;
+            }
+        }
+    </script>
+</body>
+
+<!-- Mirrored from dimden.dev/rainsong/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 03:48:41 GMT -->
+</html>
