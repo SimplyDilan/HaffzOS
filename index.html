@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from dimden.dev/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 16:54:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dimden's hotel</title>
+    <link rel="stylesheet" href="css/maineccb.css?3">
+    <meta name="description" content="My website and blog.">
+    <meta name="keywords" content="dimden, JS, JavaScript, discord, nes, emulators, 90s, pixels, moon, neocities">
+    <meta name="author" content="dimden">
+    <meta name="darkreader-lock">
+    <link rel="icon" href="favicon.png">
+    <meta property="og:image" content="../lune.dimden.dev/3c3441f37d.png" />
+    <link rel="preload" href="js/polyfills.js" as="script" />
+    <link rel="preload" href="js/script.compiled.js" as="script" />
+    <style id="flickering-style">
+        @keyframes flickering {
+            0% { opacity: 0.63 }; 1% { opacity: 0.46 }; 2% { opacity: 0.95 }; 3% { opacity: 0.37 }; 4% { opacity: 0.78 }; 5% { opacity: 0.41 }; 6% { opacity: 1.14 }; 7% { opacity: 0.9 }; 8% { opacity: 0.43 }; 9% { opacity: 1.17 }; 10% { opacity: 0.48 }; 11% { opacity: 0.94 }; 12% { opacity: 0.91 }; 13% { opacity: 0.92 }; 14% { opacity: 0.86 }; 15% { opacity: 0.73 }; 16% { opacity: 0.76 }; 17% { opacity: 1.04 }; 18% { opacity: 0.42 }; 19% { opacity: 0.99 }; 20% { opacity: 0.53 }; 21% { opacity: 0.76 }; 22% { opacity: 1.12 }; 23% { opacity: 1.22 }; 24% { opacity: 0.79 }; 25% { opacity: 0.36 }; 26% { opacity: 0.8 }; 27% { opacity: 0.57 }; 28% { opacity: 1.28 }; 29% { opacity: 1.05 }; 30% { opacity: 0.38 }; 31% { opacity: 0.85 }; 32% { opacity: 1.23 }; 33% { opacity: 1.07 }; 34% { opacity: 0.41 }; 35% { opacity: 0.64 }; 36% { opacity: 0.4 }; 37% { opacity: 0.63 }; 38% { opacity: 0.97 }; 39% { opacity: 1.03 }; 40% { opacity: 0.84 }; 41% { opacity: 1.34 }; 42% { opacity: 0.78 }; 43% { opacity: 0.69 }; 44% { opacity: 1.17 }; 45% { opacity: 0.64 }; 46% { opacity: 1.04 }; 47% { opacity: 1.02 }; 48% { opacity: 0.65 }; 49% { opacity: undefined }; 50% { opacity: 1 }; 
+        }
+    </style>
+</head>
+<body>
+    <a class="skip-to" href="#home-link">
+        Skip to MENU
+    </a>
+    <img src="images/bg.png" id="bg">
+    <div id="snow" hidden></div>
+    <span id="debug"></span>
+    <span id="fps"></span>
+    <div id="container">
+        <img src="images/wires.png" id="wires" width="922" height="126">
+        <img src="images/mewo.png" id="mewo">        
+        <div id="logo">
+            <img src="images/letters/D1.png" class="letter la rain-hitbox" style="margin-right: -12px;" id="logo-d0">
+            <img src="images/letters/IM.png" class="letter la rain-hitbox" style="margin-right: -5px;">
+            <img src="images/letters/D2.png" class="letter la rain-hitbox" style="margin-right: -5px;" id="logo-d">
+            <img src="images/letters/E.png" class="letter la rain-hitbox" style="margin-right: -5px;">
+            <img src="images/letters/N.png" class="letter la rain-hitbox" style="margin-left: 2px;margin-bottom: -3px;position:absolute;" id="logo-n">
+        </div>
+        <table>
+            <tbody>
+                <tr>
+                    <!-- MAIN -->
+                    <td id="maintd">
+                        <div id="cursors"></div>
+                        <div class="box rain-hitbox" id="mainbox">
+                            <img style="vertical-align: sub; margin-right: 5px;" src="images/moon.png" class="moon-icon">
+                            <h2 style="display:inline">Welcome to DIMDEN.DEV!</h2><br>
+                            <img src="images/dimden.gif" id="dimdengif">
+                            <div id="mood-div" title="Last update: 11/7/2024, 4:49:50 PM">
+                                <a href="https://mood.dimden.dev/">
+                                    <span id="mood" style="color:#e64f22">-0.12 / +0.55</span>
+                                </a>
+                            </div>
+                            <!-- <div class="top-warning">
+                                <b>My old Twitter account is gone!!!</b>
+                                <br>
+                                <span>Please follow new one: <a href="https://twitter.com/dimden" target="_blank">@dimden</a>. Thank you!</span>
+                            </div> -->
+                            <p>
+                                Thi<i>s</i> is my little website and blog. It's inspired by all these neocities sites (and my older site). It was created on June 1st, 2022.
+                            </p>
+                            <p>
+                                I'm q<i>u</i>ite obviously a programmer. I code some random things when I fee<i>l</i> like it. You can read more about me <a href="about.html">here</a>!
+                            </p>
+                            <span>
+                                Some quick facts:<br>
+                            </span>
+                            <ul style="margin-block-start: 5px">
+                                <li>I'm from Ukraine (and yes, I still live here).</li>
+                                <li>My main programming language is JavaScript.</li>
+                                <li>I love <span style="color: lightyellow">Moon</span> and  <span style="color: lightblue">clouds</span>.</li>
+                                <li>I hate the <a href="sun.html" style="color:red">Sun</a>.</li>
+                                <li>I'm an admin o<i>f</i> cool website called <a href="https://ourworldofpixels.com/">OurWorldOfPixels.com</a>.</li>
+                                <li>I spend almost all my time at home chatting in my <a href="https://discord.gg/yaqzbDBaAA">Discord server</a> and doing random things on my compooter.</li>
+                                <li>I'm a home-st<i>u</i>dent in some random Ukrainian CS university.</li>
+                                <li>I code websites, scrapers, bots and scripts. You can also orde<i>r</i> things from me (use <a href="cdn-cgi/l/email-protection.html#fb9a9f969295bb9f92969f9e95d59f9e8d">email</a>).</li>
+                            </ul>
+                            <div class="notice" id="blocknotice" hidden>
+                                <span id="close-notice">&times;</span>
+                                <h4 style="margin-bottom:5px;margin-top:-4px">Adblock detected</h4>
+                                <span>
+                                    If website looks wrong, crappy or buggy, please disable your adblocker! This is my personal site and it has <b>no</b> real ads but it's script-heavy and things can break with it on.
+                                </span>
+                            </div>
+                        </div>
+                        <div style="margin-top:10px">
+                            <marquee onmouseover="this.stop();" onmouseout="this.start();">
+                                <span style="color:white">THANK YOU MY <a href="https://www.patreon.com/dimdendev" target="_blank">PATRONS</a>:
+                                <span><a href="https://twitter.com/SharkMamaVT" target="_blank" rel="noopener">SharkMama</a>, <a href="https://dylan.at/" target="_blank" rel="noopener">dylan.at</a>, <a href="https://nightcat.gg/" target="_blank" rel="noopener">Nightcat</a>, <a target="_blank" rel="noopener" href="https://kasio.quest/">kasio</a>, fippe, <a href="https://hakase.life/" target="_blank" rel="noopener">Hakase</a>, <a href="https://twitter.com/VsGinNEW" target="_blank" rel="noopener">Yutamon</a>, <a href="https://nmlgc.net/" target="_blank" rel="noopener">Nmlgc</a>, Henonaho, zesteas, Nullo, Alphalaneous, Martin, wiifucky, TadeusTaD, OhKero, Assassino, pwnd4, araghon007, Kenny, Menal, akroxas, CozyWhiteBear, KtachibanaM, Hux, munamuna, kuurt, PPRMasked, caliburny, girlyfurry</span>
+                            </span></marquee>
+                        </div>
+                        <!-- <div class="box" style="margin-top: 10px">
+                            <a href="https://kanji.dimden.dev" style="font-size: 12px;text-align: center;display: block;">
+                                <b>Learning Japanese!</b>
+                                <span style="color:white;text-decoration:none" id="kanji-stats"></span>
+                            </a>
+                        </div> -->
+                        <div class="box" style="margin-top: 10px">
+                            <img style="vertical-align: sub; margin-right: 5px;" src="images/moon.png" class="moon-icon">
+                            <h2 style="display:inline">Blog</h2><br><br>
+                            <span class="blog-arrow">-</span><b><a href="blog/index525b.html?id=13-optimizing-rendering-of-100k-html-nodes">Optimizing rendering of 100,000+ HTML nodes</a></b>&nbsp;&nbsp;—&nbsp;&nbsp;Thursday, April 4th, 2024<!--<span style="color:red;font-size:12px">(new)</span>--><br>
+                            <span class="blog-arrow">-</span><b><a href="blog/index3606.html?id=12-custom-profile-css-in-oldtwitter">Custom profile CSS in OldTwitter</a></b>&nbsp;&nbsp;—&nbsp;&nbsp;Sunday, 30th July, 2023<br>
+                            <span class="blog-arrow">-</span><b><a href="blog/indexb524.html?id=10-making-tetris-twitter-bot-with-node-js">Making Tetris in Twitter with Node.js</a></b>&nbsp;&nbsp;—&nbsp;&nbsp;Tuesday, 17th of August 2021<br>
+                            <!-- <span class="blog-arrow">-</span><b><a href="/blog/?id=9-utix-the-ultimate-discord-bot">Utix: The ultimate Discord bot</a></b>&nbsp;&nbsp;—&nbsp;&nbsp;Monday, 15th of February 2021<br> -->
+                            <span class="blog-arrow">-</span><b><a href="blog/indexc8f6.html?id=8-the-migration-2">The Migration 2</a></b>&nbsp;&nbsp;—&nbsp;&nbsp;Wednesday, 26th of August 2020<br>
+                            <span class="blog-arrow">-</span><b><a href="blog/index0c81.html?id=7-utix-website">The Utix website</a></b>&nbsp;&nbsp;—&nbsp;&nbsp;Sunday, 23th of February 2020<br>
+                            <span class="blog-arrow">-</span><b><a href="blog/indexe70c.html?id=6-brainfuck-js">brainfuck.js</a></b>&nbsp;&nbsp;—&nbsp;&nbsp;Sunday, 12th of January 2020<br>
+                            <span class="blog-arrow">-</span><b><a href="blog/index9ce8.html?id=5-the-migration">The Migration</a></b>&nbsp;&nbsp;—&nbsp;&nbsp;Friday, 16th of August 2019<br>
+                            <span class="blog-arrow">-</span><b><a href="blog/index998c.html?id=4-the-puzzle-3-and-stuff">The Puzzle 3 and stuff</a></b>&nbsp;&nbsp;—&nbsp;&nbsp;Tuesday, 6th of August 2019<br>
+                            <span class="blog-arrow">-</span><b><a href="blog/index3808.html?id=3-multiline-task-hello-world">Multi Line Task∞: Hello World</a></b>&nbsp;&nbsp;—&nbsp;&nbsp;Saturday, 25th of May 2019<br>
+                            <span class="blog-arrow">-</span><b><a href="blog/indexe6d1.html?id=2-chip8js-my-first-emulator">chip8js - my first emulator</a></b>&nbsp;&nbsp;—&nbsp;&nbsp;Sunday, 12th of May 2019<br>
+                            <span class="blog-arrow">-</span><b><a href="blog/indexffa0.html?id=1-hello-world">Hello World!</a></b>&nbsp;&nbsp;—&nbsp;&nbsp;Friday, 10th of May 2019<br>
+                        </div>
+                        <div id="projects-banner">
+                            <a href="https://neocities.org/site/dimden" target="_blank">
+                                <img src="images/banners/neocities.gif" width="650" height="77" loading="lazy">
+                            </a>
+                        </div>
+                        <div class="box rain-hitbox" style="margin-top: 10px;">
+                            <img class="rain-hitbox" id="meow-link" src="images/meow_knob.html" alt="meow">
+                            <img id="rainworld-platform" src="https://dimden.dev/images/platform.png">
+                            <a id="rainworld-slugcat" href="https://dimden.dev/complex.html"><img src="https://dimden.dev/images/slugcat.png"></a>
+                            <img style="vertical-align: sub; margin-right: 5px;" src="https://dimden.dev/images/moon.png" class="moon-icon">
+                            <h2 style="display:inline">Projects</h2>
+                            <br><br>
+                            <a target="_blank" rel="nofollow" href="https://github.com/dimdenGD/OldTwitter/"><h3>☾ OldTwitter</h3></a><br>
+                            Chrome & Firefox extension to return old Twitter UI from 2015. <a target="_blank" href="https://github.com/dimdenGD/OldTwitter/">Link</a>
+                            <br><br>
+                            <a target="_blank" rel="nofollow" href="https://nekoweb.org/"><h3>☾ Nekoweb</h3></a><br>
+                            My own web-hosting, similar to Neocities but cooler!! It has a number of improvements so if you're looking to move check it out! <a target="_blank" href="https://nekoweb.org/">Link</a>
+                            <br><br>
+                            <a target="_blank" rel="nofollow" href="https://whispy.org/"><h3>☾ Whispy</h3></a><br>
+                            An ACTUALLY good Twitter alternative! <a target="_blank" href="https://whispy.org/">Link</a>
+                            <br><br>
+                            <!-- <a target="_blank" href="https://utix.dev/"><h3>☾ Utix</h3></a><br>
+                            My Discord bot Utix. It's a bot for basically everything: programming, math, astronomy, chemistry, etc. <a target="_blank" href="https://utix.dev/">Link</a>
+                            <br><br> -->
+                            <a target="_blank" rel="nofollow" href="https://atabook.org/"><h3>☾ Atabook</h3></a><br>
+                            My guestbook service, made in response to 123Guestbook death. <a target="_blank" href="https://atabook.org/">Link</a>
+                            <br><br>
+                            <a target="_blank" rel="nofollow" href="https://frizwoods.com/"><h3>☾ Frizwoods</h3></a><br>
+                            One of serious projects I made for my friend opening law firm. Text is fully customizable on site and has nice article engine I made. <a target="_blank" href="https://frizwoods.com/">Link</a>
+                            <br><br>
+                            <a target="_blank" rel="nofollow" href="https://dimden.dev/grillbys"><h3>☾ Grillby's Multiplayer</h3></a><br>
+                            A small multiplayer game where you can chill in Grillby's ((C) UNDERTALE). <a target="_blank" href="https://dimden.dev/grillbys">Link</a>
+                            <br><br>
+                            <a target="_blank" href="https://dimden.dev/cyberbiology"><h3>☾ Cyberbiology</h3></a><br>
+                            A 'game' where cells have DNA and can evolve. <a target="_blank" href="https://dimden.dev/cyberbiology">Link</a>
+                            <br><br>
+                            <b>And couple of other projects:</b><br><br>
+                            <span>
+                                <a target="_blank" href="https://github.com/dimdenGD/OldTweetDeck">OldTweetDeck</a> ✩ 
+                                <a target="_blank" href="https://github.com/dimdenGD/YeahTwitter">Yeah for Twitter</a> ✩ 
+                                <a target="_blank" href="https://github.com/dimdenGD/chrome-lens-ocr">Chrome Lens OCR</a> ✩ 
+                                <a target="_blank" href="https://chrome.google.com/webstore/detail/html-comments-finder/opijbipenamgfcnhfpklbamhaanhhpda">HTML Comment Finder</a>
+                                <a target="_blank" href="https://opm.dimden.dev/">OPM</a> ✩ 
+                                <!-- <a target="_blank" href="https://utix.dev/">Utix</a> ✩  -->
+                                <a target="_blank" href="https://dimden.dev/puzzle3">Puzzle</a> ✩ 
+                                <a target="_blank" href="https://dimden.dev/chip8">chip8.js</a> ✩ 
+                                <!-- <a target="_blank" href="https://utix-web.dimden.dev/">Utix WEB</a> ✩  -->
+                                <a target="_blank" href="https://github.com/dimdenGD/discord-oled-theme">Discord OLED Theme</a> ✩ 
+                                <a target="_blank" href="https://github.com/dimdenGD/OWOP.js_v2">OWOP.js</a> ✩ 
+                                <a target="_blank" href="https://github.com/dimdenGD/blackjack-js">Blackjack.js</a> ✩ 
+                                <a target="_blank" href="https://github.com/dimdenGD/Brutal.js">Brutal.io client</a> ✩ 
+                                <!-- <a target="_blank" href="https://systemspace.dimden.dev/warning.php">Systemspace Archive</a> ✩  -->
+                                <a target="_blank" href="https://dimden.dev/beautifier/">JS "beautifier"</a> ✩ 
+                                <a target="_blank" href="https://github.com/dimdenGD/neocities-scripts">Neocities scripts</a> ✩ 
+                                <a target="_blank" href="https://dimden.dev/japanese/grammar/verbs.html">Japanese verb conjugations quiz</a>
+                            </span>
+                        </div>
+                        <div class="box terminal" style="margin-top: 10px;">
+                            <span>Systems status: <span id="system-status" class="status-ok">OK</span><br>
+                            <br>
+                            <table>
+                                <tbody>
+                                    <tr id="statuses">
+                                        <td>
+                                            <span>[<span id="dimdendev-status" class="status-ok"> OK </span>] dimden.dev</span><br>
+                                            <span>[<span id="proxy-status" class="status-ok"> OK </span>] proxy</span><br>
+                                            <!-- <span>[<span id="utix-status" class="status-fail">FAIL</span>] utix.dev</span><br> -->
+                                            <span>[<span id="frizwoods-status" class="status-ok"> OK </span>] frizwoods</span><br>
+                                            <span>[<span id="bot-status" class="status-ok"> OK </span>] bot</span><br>
+                                        </td>
+                                        <td>
+                                            <span>[<span id="owopbot-status" class="status-ok"> OK </span>] owopbot</span><br>
+                                            <span>[<span id="nekoweb-status" class="status-ok"> OK </span>] nekoweb</span><br>
+                                            <span>[<span id="atabook-status" class="status-ok"> OK </span>] atabook</span><br>
+                                            <span>[<span id="lune-status" class="status-ok"> OK </span>] lune</span><br>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="chat" class="box" style="margin-top: 10px;">
+                            <img style="vertical-align: sub; margin-right: 5px;" height="24" src="https://dimden.dev/images/chat.png">
+                            <h2 style="display:inline">Chat</h2>
+                            <b id="hotel">ホテル</b>
+                            <br><br>
+                            <div id="messages">
+                                <noscript>
+                                    <span style="color:red" class="chat-msg">wahh!! javascript is disabled :(</span><br><br>
+                                </noscript>
+                            </div>
+                            <div id="bar" style="margin-top:4px">
+                                
+                                    <input type="text" id="message" placeholder="Enter message - please be nice!" autocomplete="off" maxlength="300">
+                                    <button id="send">Send</button>
+                                
+                            </div>
+                        </div>
+                    </td>
+
+                    <!-- MENU -->
+                    <td id="menutd" style="max-width: 225px">
+                        <div class="box rain-hitbox" id="linksdiv">
+                            <img style="vertical-align: top; margin-right: 5px; position:relative;cursor:pointer" src="https://dimden.dev/images/warpstar.png" id="kirby">
+                            <h2 style="display:inline">Stars</h2>
+                            <img src="https://dimden.dev/images/electricity_on.png" id="switch">
+                            <br><br>
+                            <a class="navlink" href="https://dimden.dev/" id="home-link">✩ Home</a><br>
+<a class="navlink" href="https://dimden.dev/about.html" id="about-link">✩ About me<!-- <span style="color:red;vertical-align: super;font-size: 12px;margin-left:3px">new!</span> --></a><br>
+<a class="navlink" href="https://diary.dimden.dev/">✩ Diary</a><br>
+<a class="navlink" href="https://album.dimden.dev/">✩ Photo Album</a><span id="new-photos"></span><br>
+<a class="navlink" href="https://dimden.dev/blogindex">✩ Blog</a><br>
+<a class="navlink"target="_blank" href="https://neocities.org/site/dimden">✩ Neocities page</a><br>
+<b><a class="navlink" target="_blank" href="https://discord.gg/yaqzbDBaAA">✩ Discord</a></b> <i style="color:gray"><-- join!!</i><br>
+<a class="navlink" href="https://dimden.atabook.org/">✩ Guestbook</a><br>
+<a class="navlink" target="_blank" href="https://twitter.com/dimden">✩ Twitter</a><br>
+<a class="navlink" target="_blank" href="https://dimdeneff.tumblr.com/">✩ Tumblr</a><br>
+<a class="navlink" target="_blank" href="https://github.com/dimdenGD">✩ GitHub</a><br>
+<a class="navlink" target="_blank" href="https://www.last.fm/user/dimdendev">✩ Last.fm</a><br>
+<a class="navlink" href="https://dimden.dev/donate">✩ Donate <img src="https://dimden.dev/images/smoldimden.png" style="vertical-align: middle; float:right; margin-top:-9px;margin-left:2px"></a><br>
+<a class="navlink" href="https://mood.dimden.dev/">✩ Mood tracker <img id="mood-emoji" style="vertical-align: bottom;" src="https://mood.dimden.dev/fbemoji/confused.png"></a><br>
+<a class="navlink" href="https://dimden.dev/grillbys/">✩ Grillby's</a><br>
+<a class="navlink" href="https://dimden.dev/navlinkads">✩ NavLink Ads</a><br>
+<a class="navlink" href="https://dimden.dev/gallery">✩ OC Gallery</a><br>
+<a class="navlink" href="https://dimden.dev/cdn-cgi/l/email-protection#6e0f0a0307002e0a07030a0b00400a0b18">✩ E-mail <img src="https://dimden.dev/images/mail.png" style="vertical-align: bottom;margin-left: 3px;"></a><br>
+                        </div>
+                        <div class="box centerbox" style="margin-top: 10px">
+                            <span>I'm</span>
+                            
+                                <h2 id="status" style="color:lime;text-shadow:rgb(4 255 214 / 0%) 0px 0px 10px, rgb(0 255 236 / 17%) 0px 0px 20px, rgb(2 230 0 / 17%) 0px 0px 30px, rgb(0 230 178 / 0%) 0px 0px 40px, rgb(0 230 27 / 24%) 0px 0px 50px, rgb(0 230 178 / 0%) 0px 0px 60px, rgb(0 230 122 / 0%) 0px 0px 70px">Online!</h2>
+                            
+                        </div>
+                        <div class="box" style="margin-top: 10px;margin-bottom: 10px;">
+                            
+                                <div class="blob" id="pulser"></div> <b id="currentlylistening">Current song:</b><br><br>
+                            
+                            <a href="https://www.last.fm/music/HAARPER/_/Wtf+U+Mean+(feat.+Freddie+Dredd)" id="songlink" target="_blank">
+                                <div id="musicbox">
+                                    <img src="https://lastfm.freetls.fastly.net/i/u/34s/7956eb0499c50f8d820a0281569a9e22.jpg" width="50" height="50" id="albumcover">
+                                    
+                                        
+                                            <marquee onmouseover="this.stop();" onmouseout="this.start();" scrollamount="3" id="songname">Wtf U Mean (feat. Freddie Dredd)</marquee>
+                                        
+                                    
+                                    <span id="artist">HAARPER</span>
+                                </div>
+                            </a>
+                            <span id="lastplayed" style="color:gray"></span>
+                        </div>
+                        <a class="skip-to" href="#pre-tweet">
+                            Skip buttons
+                        </a>
+                        <marquee scrollamount="3" loop="infinite" onmouseover="this.stop();" onmouseout="this.start();" id="buttons-misc">
+                            <a rel="nofollow" href="https://deepstatemap.live/" target="_blank"><img src="https://dimden.dev/images/buttons/atlas.gif"></a>
+                            <a rel="nofollow" href="https://boxy.neocities.org/" target="_blank"><img src="https://dimden.dev/images/buttons/gaygoogle.gif"></a>
+                            <img src="https://dimden.dev/images/buttons/win95.gif">
+                            <a rel="nofollow" target="_blank" href="https://undertale.com/"><img src="https://dimden.dev/images/buttons/undertale.gif"></a>
+                            <a rel="nofollow" target="_blank" href="https://github.com/dimdenGD/ultimate-express"><img src="https://dimden.dev/images/buttons/uexpress.png"></a>
+                            <img src="https://dimden.dev/images/buttons/beekeeping_in_ukraine.gif">
+                            <img src="https://dimden.dev/images/buttons/asswolf_txt.gif">
+                            <img src="https://dimden.dev/images/buttons/Rain_World_button.gif">
+                            <img src="https://dimden.dev/images/buttons/OneShot_button.gif">
+                            <img src="https://dimden.dev/images/buttons/krisbtn.png">
+                            <img src="https://dimden.dev/images/buttons/debian.gif">
+                            <img src="https://dimden.dev/images/buttons/phonechump.gif">
+                            <img src="https://dimden.dev/images/buttons/jquery.gif">
+                            <img src="https://dimden.dev/images/buttons/best_chrome.gif">
+                            <img src="https://dimden.dev/images/buttons/madewithnotepad2.gif">
+                            <img src="https://dimden.dev/images/buttons/neocities.gif">
+                            <iframe src="http://incr.easrng.net/badge?key=changeme" style="background: url(http://incr.easrng.net/bg.gif)" title="increment badge" width="88" height="31" frameborder="0"></iframe>
+                        </marquee>
+                        <i id="cool-sites"><-- cool sites</i>
+                        <marquee scrollamount="3" loop="infinite" onmouseover="this.stop();" onmouseout="this.start();" direction="right" id="buttons-sites">
+                            <!-- <a href="https://whispy.org/" target="_blank"><img src="/images/buttons/whispynow.png" alt=""></a> -->
+                            <a href="https://nekoweb.org/"><img src="https://nekoweb.org/assets/buttons/button6.gif" alt="nekoweb"></a>
+                            <a rel="noopener" href="https://apfelproject.com/" target="_blank"><img src="https://dimden.dev/images/buttons/apfel-button.png" alt=""></a>
+                            <a rel="noopener" href="https://melankorin.net/" target="_blank"><img src="https://melankorin.net/assets/img/buttons/button-1.gif" alt=""></a>
+                            <!-- <a rel="noopener" href="https://dokodemo.neocities.org/" target="_blank"><img src="/images/buttons/dokodemobutton3.gif"></a> -->
+                            <a rel="noopener" href="https://melps.neocities.org/" target="_blank"><img src="https://melps.neocities.org/limk1.jpg" width='88px'></a> 
+                            <a rel="noopener" href="https://cinni.net/" target="_blank"><img height="32" src="https://dimden.dev/images/buttons/cinni.gif" width='88px'></a> 
+                            <a rel="noopener" href="https://natu.moe/" target="_blank"><img src="https://natu.moe/img/natumoe.gif"></a>
+                            <a rel="noopener" href="https://meows.zip/?ref=dimden" target="_blank"><img src="https://meows.zip/meowszip.png"></a>
+                            <a rel="noopener" href="https://mm4rk3t.neocities.org/" target="_blank"><img src="https://dimden.dev/images/buttons/mm4rk3t.gif"></a>
+                            <a rel="noopener" href="https://amapy.cc/" target="_blank"><img src="https://dimden.dev/images/buttons/amapy.gif"></a>
+                            <a rel="noopener" href="http://www.dabun-doumei.com/" target="_blank"><img height="32" src="https://dimden.dev/images/buttons/dabun.gif"></a>
+                            <a rel="noopener" href="https://fauux.neocities.org/" target="_blank"><img src="https://dimden.dev/images/buttons/fauux.gif" width='88px'></a> 
+                            <!-- <a rel="noopener" href="https://roachstarz.neocities.org/" target="_blank"><img src="/images/buttons/rchstrzbutton.gif"></a> -->
+                            <a rel="noopener" href="https://pocl.neocities.org/" target="_blank"><img src="https://dimden.dev/images/buttons/poclbutton.gif"></a>
+                        </marquee>
+                        <div class="box" style="margin-top:5px">
+                            <div id="pre-tweet">
+                                <b>✧ Current status</b>:</b><br>
+                                <span id="tweet">
+                                    <a target="_blank" href="https://twitter.com/dimden"><img src="https://dimden.dev/images/dimdenpfp.jpg" width="32" height="32" id="tweet-avatar"></a>
+                                    <a style="text-decoration:none" target="_blank" href="https://twitter.com/dimden"><b id="tweet-author">dimden</b> <span style="color:white">•</span> <span id="tweet-date" style="color:#bfbfbf">18h</span></a>
+                                    <br>
+                                    <span id="tweet-text">im happy to see that these are still around  (video)</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="box centerbox" style="margin-top: 10px;">
+                            <div id="pre-moon">
+                                <img src="https://dimden.dev/images/dimdenomori2.png" alt="corruption" style="position: absolute;z-index:-10;filter: brightness(0.1);margin-left: 57px;" class="corruption">
+                                <iframe src="https://dimden.dev/moon" allowtransparency="true" width="180" height="160" style="border:none" id="moon-iframe"></iframe>
+                            </div>
+                        </div>
+                        <div class="box centerbox" style="margin-top: 10px;">
+                            <img id="my-button" src="https://dimden.dev/services/images/88x31.gif"><br><br>
+                            <textarea style="width:155px" readonly><a href="https://dimden.dev/"><img src="https://dimden.dev/services/images/88x31.gif"></a></textarea><br>
+                            <span style="color:gray;margin-top:5px;display:block">DO hotlink my button! <span style="cursor:pointer" onclick="document.getElementById('why-hotlink').hidden = !document.getElementById('why-hotlink').hidden">[?]</span>
+                            <div id="why-hotlink" style="font-size:12px" hidden>
+                                <br>
+                                <span>
+                                    You might see people saying that hotlinking is bad.<br>
+                                    But the issues discussed there do not apply to my site - i have endless bandwidth.<br>
+                                    I want to be able to change my button any time I want, without having to ask people to change it.<br>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- <div class="box" style="margin-top: 10px; display: flex;">
+                            <button id="music-control">▶</button> <marquee scrollamount="1" id="music-name" style="color:lime">Benny Smiles - Hotline Miami Theme</marquee>
+                        </div> -->
+                        <div class="box centerbox" style="margin-top: 10px;white-space:nowrap;padding:10px 0">
+                            <a rel="nofollow" href="https://hotlinewebring.club/dimden/previous" id="hotline-previous"><--</a> Hotline Webring <a rel="nofollow" href="https://hotlinewebring.club/dimden/next" id="hotline-next">--></a>
+                        </div>
+                        <div class="centerbox rain-hitbox" style="margin-top: 10px; display: flex; place-content: center;">
+                            <div id="pre-banner">
+                                <iframe width="212" height="212" style="border:none" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
+                            </div>
+                        </div>
+                        <div class="box" style="margin-top: 10px">
+                            <div id="pre-hit">
+                                <iframe style="border:none" src="https://dimden.dev/hc" name="hitcounter" width="180" height="60"></iframe>
+                            </div>
+                        </div>
+                        <div class="box" id="hidemycursor-div" style="margin-top: 10px">
+                            <div>
+                                <input type="checkbox" id="hidemycursor"> <label for="hidemycursor">Hide my cursor</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="hidecursors"> <label for="hidecursors">Hide others cursors</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="mutechat"> <label for="mutechat">Mute chat notifications</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="muterain"> <label for="muterain">Mute rain</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="disablerain"> <label for="disablerain">Disable rain</label>
+                            </div>
+                        </div>
+                        <div style="margin-top:10px;text-align-last:center">
+                            <a href="https://dimden.dev/warm.html">
+                                <img id="kelvin" class="kelvin-light" src="https://dimden.dev/images/kelvin.gif" width="178" height="152">
+                            </a>
+                            <a href="https://dimden.dev/magic.html">
+                                <img id="minecraftblock" src="https://dimden.dev/images/minecraftblock.png" width="32" height="32">
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <footer>
+            <!-- <span>Join my <a href="https://discord.gg/yaqzbDBaAA" target="_blank">Discord server</a>!!! Please!!!!!</span> -->
+            <!-- <br><br> -->
+            <span id="copyright">(c) 2019-2024 dimden. All Rights Reserved.</span><br>
+<a href="https://dimden.dev/cdn-cgi/l/email-protection#94f5f0f9fdfad4f0fdf9f0f1fabaf0f1e2"><span class="__cf_email__" data-cfemail="1d7c797074735d7974707978733379786b">[email&#160;protected]</span></a>
+
+            <br><br>
+            <div id="brimstone" hidden>
+                <img src="https://dimden.dev/images/sulphur.png" alt="Brimstone" id="sulphur">
+                <img src="https://dimden.dev/images/sulphur.png" alt="Hidden Brimstone" id="hidden-sulphur-1">
+            </div>
+            <br>
+        </footer>
+        <iframe src="https://dimden.neocities.org/iframe.html" style="display:none"></iframe>
+        <iframe src="https://dimden.nekoweb.org/blank.html" style="display:none"></iframe>
+        <br>
+    </div>
+    <canvas id="rain-canvas"></canvas>
+    <!-- <div id="rain-div"></div> -->
+    <canvas style="width:100%" id='doom-canvas' width="800" height="350"></canvas>
+    <div id="backside" hidden>
+        <div id="backside-container">
+            <a href="https://dimden.dev/" style="margin-left: 347px;top: 12px;position:absolute;color:red!important;">please let me go please let me</a>
+            <img id="butler" src="https://dimden.dev/images/BUTLER.png">
+            <span style="top:100px;position:relative">WELCOME TO THE BACK SIDE OF MY SITE!!! PLEASE KEEP YOUR HEAD BEHIND THESE DIVS TO NOT SPOOK THE NORMAL HUMANS</span>
+            <img src="https://dimden.dev/images/gods_grace.jpg" style="position: absolute;top: 225px;margin-left: 250px;" alt="gods grace" title="gods grace">
+            <img src="https://dimden.dev/images/toby.png" style="position: absolute;top: 360px;margin-left: 250px;" alt="why cant i be">
+            <img src="https://dimden.dev/images/gods_grace2c.jpg" width="300" style="position: absolute;top: 613px;margin-left: -124px;" alt="gods grace" title="gods grace">
+            <a href="https://dimden.dev/tv.html" target="_blank"><img src="https://dimden.dev/images/tv.gif" style="position: absolute;top: 162px;margin-left: -70px;" alt="tv"></a>
+            <span style="margin-left: -50pxpx;top: 290px;position:absolute;">you'll never know</span>
+            <div>
+                <iframe src="https://dimden.dev/journey/1" allowtransparency="true" width="400" height="300" style="border:none;margin-left: 544px;top: 592px;position:absolute;"></iframe>
+            </div>
+            <img src="https://dimden.dev/images/dimdenomori2.png" alt="corruption" style="position: absolute;top: 384px;margin-left: 90px;" class="corruption">
+            <span style="margin-left: -71px;top: 469px;position:absolute; text-align:center">"dont you find it weird that we dont have anything behind us?"</span>
+            <a style="margin-left: 457px;top: 979px;position:absolute; text-align:center;color: red!important;cursor: pointer;" id="mute">[mute]</a>
+            <a href="https://dimden.dev/basketball" target="_blank"><img width="32" height="32" src="https://dimden.dev/images/basketball.png" style="position: absolute;top: 1289px;margin-left: 320px;" alt="basketball"></a>
+            <a href="https://dimden.dev/rainsong" target="_blank"><img width="32" height="32" src="https://dimden.dev/rainsong/Rain_Song.png" style="position: absolute;top: 1189px;margin-left: 520px;" alt="rainsong"></a>
+        </div>
+    </div>
+    <style id="dynamic-style"></style>
+    <script data-cfasync="false" src="https://dimden.dev/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://dimden.dev/js/polyfills.js"></script>
+    <script src="https://dimden.dev/js/script.compiled.js?15"></script>
+    <script src="https://dimden.dev/js/oneko.compiled.js"></script>
+    <script src="https://dimden.dev/js/rain.js?6"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137155489-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+    
+            gtag('config', 'UA-137155489-1');
+        </script>
+</body>
+
+<!-- Mirrored from dimden.dev/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 16:54:45 GMT -->
+</html>
