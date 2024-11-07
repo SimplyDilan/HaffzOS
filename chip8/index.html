@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Mirrored from dimden.dev/chip8/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 03:37:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>8chip emulator written in JS</title>
+    <style>
+        #vp {
+            width: 256px;
+            height: 128px;
+        }
+        * {
+            font-family: monospace;
+        }
+    </style>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-137155489-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-137155489-1');
+</script>
+</head>
+<body>
+<h1 id="logo">chip8.js</h1>
+<input id="file" type="file"/>
+<button id="init" onclick="processor.stop();processor.init();">Init | clear</button>
+<input id="pause" type="checkbox"/> <span>Pause</span>
+<button id="next" onclick="processor.cycle();processor.draw();">Next</button>
+<br>
+<br>
+<canvas width="64" height="32" id="vp"></canvas>
+<br>
+<br>
+<span id="vxy"></span>
+<br>
+<span id="mem"></span>
+<script src="emu.js"></script>
+<script src="script.js"></script>
+</body>
+
+<!-- Mirrored from dimden.dev/chip8/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 07 Nov 2024 03:37:57 GMT -->
+</html>
