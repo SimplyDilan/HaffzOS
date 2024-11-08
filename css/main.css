@@ -257,23 +257,33 @@ h3 {
     margin: 0;
 }
 #musicbox {
+    display: flex; /* Use flexbox to lay out the items */
+    align-items: center; /* Align items vertically in the center */
     height: 70px;
 }
+
 #albumcover {
     border: 1px solid #383838;
-    float: left;
     margin-right: 10px;
+    height: 50px; /* Fixed height for the album cover */
+    width: 50px; /* Fixed width for the album cover */
 }
+
 #songname {
-    width: 115px;
-}
-#artist {
-    overflow-wrap: anywhere;
-    max-height: 30px;
-    text-overflow: ellipsis;
-    display: grid;
+    flex-grow: 1; /* Allow the song name to take up available space */
     overflow: hidden;
+    white-space: nowrap; /* Prevent the song name from wrapping */
+    text-overflow: ellipsis; /* Add an ellipsis if the name overflows */
 }
+
+#artist {
+    align-self: flex-end; /* Align the artist name to the bottom */
+    text-align: left;
+    margin-top: 5px; /* Add space between the song name and artist */
+    overflow-wrap: anywhere;
+    font-size: 12px; /* Adjust font size if needed */
+}
+
 .blob {
     background: #5dff8a;
     border-radius: 50%;
@@ -287,6 +297,7 @@ h3 {
     vertical-align: middle;
     margin-top: -4px;
 }
+
 .inblob {
     background: rgb(93, 93, 93);
     border-radius: 50%;
@@ -299,6 +310,7 @@ h3 {
     vertical-align: middle;
     margin-top: -4px;
 }
+
 
 @keyframes pulse {
     0% {
