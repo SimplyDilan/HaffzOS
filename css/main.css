@@ -257,7 +257,7 @@ h3 {
     margin: 0;
 }
 #musicbox {
-    height: 60px;
+    height: 70px;
 }
 #albumcover {
     border: 1px solid #383838;
@@ -269,7 +269,7 @@ h3 {
 }
 #artist {
     overflow-wrap: anywhere;
-    max-height: 35px;
+    max-height: 30px;
     text-overflow: ellipsis;
     display: grid;
     overflow: hidden;
