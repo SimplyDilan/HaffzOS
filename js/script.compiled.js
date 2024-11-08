@@ -796,14 +796,14 @@ document.getElementById("switch").onclick = function () {
       l.style.filter =
         "brightness(1) drop-shadow(0 0 0.75rem rgba(20, 220, 187, 0.35))";
     });
-    document.getElementById("switch").src = "/images/light_on.png";
+    document.getElementById("switch").src = "https://dimden.dev/images/electricity_on.png";
   } else {
     letters.forEach(function (l) {
       if (fell && l.id === "logo-n") return;
       l.style.filter = "brightness(0.2)";
     });
     document.getElementById("logo").className = "noanimation";
-    document.getElementById("switch").src = "/images/light_off.png";
+    document.getElementById("switch").src = "https://dimden.dev/images/electricity_off.png";
   }
 };
 
