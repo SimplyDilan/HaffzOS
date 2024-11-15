@@ -413,7 +413,7 @@ h3 {
         0 0 50px #00e6bd3d, 0 0 60px #b200e629, 0 0 70px #a700e657;
     user-select: none;
     font-family: MS Gothic, Tahoma;
-    animation: flickering 0.1s infinite;
+    animation: flickering 0.5s infinite;
 }
 #mewo {
     position: absolute;
