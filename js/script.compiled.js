@@ -1792,50 +1792,10 @@ document.getElementById("butler").onclick = function () {
   }
 };
 
-// Banner
-var bannerDiv = document.getElementById("projects-banner");
-var projects = [
-  ["/images/banners/neocities.gif", "https://neocities.org/site/dimden"],
-  ["/images/banners/discord.png", "https://discord.gg/yaqzbDBaAA"],
-  ["/images/banners/nekoweb.jpg", "https://nekoweb.org"],
-  ["/images/banners/oldtwitter.gif", "https://github.com/dimdenGD/OldTwitter"],
-  // ["/images/banners/utix.mp4", "https://utix.dev/"],
-];
-var bannerIndex = Math.floor(Math.random() * projects.length);
-bannerDiv.children[0].hidden = bannerIndex !== 0;
-for (var _i3 in projects) {
-  if (_i3 == 0) continue; // neocities is already in html
-  var p = projects[_i3];
-  var a = document.createElement("a");
-  a.href = p[1];
-  a.target = "_blank";
-  var media = document.createElement(p[0].endsWith(".mp4") ? "video" : "img");
-  media.src = p[0];
-  media.width = "650";
-  media.height = "77";
-  media.loading = "lazy";
-  if (p[0].endsWith(".mp4")) {
-    media.loop = true;
-    media.autoplay = true;
-    media.muted = true;
-  }
-  if (+_i3 !== bannerIndex) {
-    a.hidden = true;
-  }
-  a.appendChild(media);
-  bannerDiv.appendChild(a);
-}
-setInterval(function () {
-  var a = bannerDiv.children[bannerIndex];
-  a.hidden = true;
-  var random = Math.floor(Math.random() * projects.length);
-  while (random === bannerIndex) {
-    random = Math.floor(Math.random() * projects.length);
-  }
-  bannerIndex = random;
-  a = bannerDiv.children[bannerIndex];
-  a.hidden = false;
-}, 25000);
+
+
+
+
 
 // settings
 var hmc = document.getElementById("hidemycursor");
