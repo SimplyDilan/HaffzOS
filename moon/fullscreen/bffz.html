@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forever Friendship</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+body {
+  background-color: black;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  line-height: 100vh;
+  font-style: italic;
+  font-weight: 100;
+  font-size: 10vw;
+  letter-spacing: 20px;
+}
+
+#word {
+  opacity: 0;
+  transition: opacity 2s;  /* Slow fade-in and fade-out */
+  animation: swing 3s ease-in-out infinite; /* Light swing effect */
+  z-index: 1;
+}
+
+@keyframes swing {
+  0%, 100% {
+    transform: translateX(0); /* Start and end with no movement */
+  }
+  50% {
+    transform: translateX(10px); /* Light horizontal movement */
+  }
+}
+
+.vignette {
+  background: radial-gradient(circle, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 1) 90%);
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+}
+
+.building {
+  position: absolute;
+  background-size: 56vw;
+  background-position: center center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("ladder/ladder-01.svg");
+  animation: moveY 3000s linear infinite;
+}
+
+@keyframes moveY {
+  from {
+    background-position-y: -100000px;
+  }
+
+  to {
+    background-position-y: 100000px;
+  }
+}
+
+.wires {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-size: 100vw;
+  background-position: center center;
+}
+
+.w01 {
+  background-image: url("ladder/w01.svg");
+  animation: moveY 2000s linear infinite;
+  z-index: 2;
+}
+
+.buttonBox {
+  position: absolute;
+  z-index: 98;
+  left: 50%;
+  transform: translate(-49%);
+  bottom: 20px;
+}
+
+.buttonBox a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  float: left;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-style: italic;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+  transition: letter-spacing 0.2s ease-in-out;
+  line-height: 40px;
+  font-size: 10px;
+}
+
+.buttonBox a:hover {
+  text-decoration: underline;
+  letter-spacing: 5px;
+}
+
+
+</style>
+
+</head>
+<body>
+<div class="building"></div>
+<div class="wires w01"></div>
+<div class="vignette"></div>
+<div id="word">Haffz ♡ Adrian</div>
+
+<script>
+const wordContainer = document.querySelector("#word");
+
+function showNextWord() {
+  wordContainer.style.opacity = 1;
+  setTimeout(hideWord, 2500);  // Show for 2.5 seconds
+}
+
+function hideWord() {
+  wordContainer.style.opacity = 0;
+  setTimeout(showNextWord, 2500);  // Hide for 2.5 seconds, then show again
+}
+
+showNextWord();
+</script>
+
+
+<audio hidden autoplay loop>
+  <source src="ladder/240724__stib__marching-loop_03.mp3" type="audio/mpeg">
+</audio>
+
+<audio hidden autoplay loop>
+  <source src="ladder/405151__logancircle2__urban-sidewalk-with-siren_02.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>
