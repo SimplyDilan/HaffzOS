@@ -1,8 +1,11 @@
 @font-face {
     font-family: "Pixel NES";
-    src: url("/fonts/Pixel_NES.eot?") format("eot"), url("/fonts/Pixel_NES.woff") format("woff"),
-        url("/fonts/Pixel_NES.ttf") format("truetype"),
-        url("/fonts/Pixel_NES.svg#PixelNES") format("svg");
+    src: url("https://db.onlinewebfonts.com/t/f555c47ffc99d5fbcc445e615749dc38.eot");
+    src: url("https://db.onlinewebfonts.com/t/f555c47ffc99d5fbcc445e615749dc38.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/f555c47ffc99d5fbcc445e615749dc38.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/f555c47ffc99d5fbcc445e615749dc38.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/f555c47ffc99d5fbcc445e615749dc38.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/f555c47ffc99d5fbcc445e615749dc38.svg#Pixel NES")format("svg");
     font-weight: normal;
     font-style: normal;
 }
