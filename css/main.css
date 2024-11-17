@@ -11,13 +11,13 @@
 }
 @font-face {
     font-family: "NEC_APC3";
-    src: url("/fonts/pixelfonts/Web437_NEC_APC3_8x16.woff") format("woff");
+    src: url("../fonts/pixelfonts/Web437_NEC_APC3_8x16.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: "NEC_APC3";
-    src: url("/fonts/pixelfonts/Web437_Nix8810_M16.woff") format("woff");
+    src: url("../fonts/pixelfonts/Web437_Nix8810_M16.woff") format("woff");
     font-weight: bold;
     font-style: normal;
 }
@@ -30,13 +30,13 @@
 }
 @font-face {
     font-family: "Digital";
-    src: url("/fonts/Digital-7.ttf?") format("truetype");
+    src: url("../fonts/Digital-7d41d.ttf?") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: "Perfect DOS VGA 437 Win";
-    src: url("/fonts/Perfect DOS VGA 437 Win.ttf?") format("truetype");
+    src: url("../fonts/Perfect%20DOS%20VGA%20437%20Wind41d.ttf?") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
