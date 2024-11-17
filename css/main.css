@@ -1,4 +1,4 @@
-@font-face {
+ee@font-face {
     font-family: "Pixel NES";
     src: url("../fonts/Pixel_NESd41d.eot?") format("eot"), url("../fonts/Pixel_NES.woff") format("woff"),
         url("../fonts/Pixel_NES.ttf") format("truetype"),
@@ -415,6 +415,12 @@ h3 {
     font-family: MS Gothic, Tahoma;
     animation: flickering 0.5s infinite;
 }
+
+#mewo-link {
+    position: absolute; /* Keeps the hyperlink positioned similarly to the image */
+    z-index: 500;       /* Keeps it clickable above other elements */
+}
+
 #mewo {
     position: absolute;
     padding-top: 27px;
